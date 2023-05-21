@@ -14,7 +14,7 @@ class PostmanEchoTest {
         given()
                 .baseUri("https://postman-echo.com")
                 .contentType("text/plain; charset=UTF-8")
-                .body("Я сегодня бухаю")
+                .body("Я сегодня ")
                         // отправляемые данные (заголовки и query можно выставлять аналогично)
 // Выполняемые действия
                 .when()
@@ -22,7 +22,7 @@ class PostmanEchoTest {
 // Проверки
                 .then()
                 .statusCode(200)
-                .body("data", equalTo("Я сегодня трезвый"))
+                .body("data", equalTo("Я сегодня "))
                 .contentType(ContentType.JSON)
         ;
     }
